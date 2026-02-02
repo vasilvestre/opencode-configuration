@@ -1,0 +1,173 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  
+  "agents": {
+    "sisyphus": {
+      "model": "github-copilot/claude-sonnet-4.5",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ],
+      "prompt_append": "For code search, use grepai MCP tool which provides semantic search."
+    },
+    
+    "atlas": {
+      "model": "github-copilot/claude-sonnet-4.5",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ],
+      "prompt_append": "For code search, use grepai MCP tool which provides semantic search."
+    },
+    
+    "oracle": {
+      "model": "github-copilot/gpt-5.2",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "gpt-5.2" },
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ]
+    },
+    
+    "librarian": {
+      "model": "zai-coding-plan/glm-4.7",
+      "fallbackChain": [
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" },
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" }
+      ],
+      "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
+    },
+    
+    "explore": {
+      "model": "zai-coding-plan/glm-4.7-flash",
+      "fallbackChain": [
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["github-copilot"], "model": "gpt-5-mini" },
+        { "providers": ["opencode"], "model": "gpt-5-nano" }
+      ],
+      "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
+    },
+    
+    "multimodal-looker": {
+      "model": "zai-coding-plan/glm-4.6v",
+      "fallbackChain": [
+        { "providers": ["zai-coding-plan"], "model": "glm-4.6v" },
+        { "providers": ["github-copilot"], "model": "gemini-2.5-pro" },
+        { "providers": ["google"], "model": "gemini-2.5-pro" }
+      ]
+    },
+    
+    "metis": {
+      "model": "opencode/kimi-k2.5-free",
+      "fallbackChain": [
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" },
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4" }
+      ],
+      "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
+    },
+    
+    "prometheus": {
+      "model": "github-copilot/claude-sonnet-4.5",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ],
+      "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
+    },
+    
+    "momus": {
+      "model": "github-copilot/gpt-5.2",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "gpt-5.2" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ],
+      "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
+    },
+    
+    "sisyphus-junior": {
+      "model": "opencode/kimi-k2.5-free",
+      "fallbackChain": [
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["github-copilot"], "model": "gpt-5-mini" }
+      ],
+      "prompt_append": "For code search, use grepai MCP tool which provides semantic search."
+    }
+  },
+  
+  "categories": {
+    "quick": {
+      "model": "zai-coding-plan/glm-4.7-flash",
+      "fallbackChain": [
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["github-copilot"], "model": "gpt-5-mini" },
+        { "providers": ["opencode"], "model": "gpt-5-nano" }
+      ]
+    },
+    
+    "ultrabrain": {
+      "model": "github-copilot/gpt-5.2-codex",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "gpt-5.2-codex" },
+        { "providers": ["github-copilot"], "model": "gpt-5.2" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" }
+      ]
+    },
+    
+    "deep": {
+      "model": "github-copilot/claude-sonnet-4.5",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
+        { "providers": ["github-copilot"], "model": "gpt-5.2" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ]
+    },
+    
+    "visual-engineering": {
+      "model": "github-copilot/gemini-3-pro-preview",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "gemini-3-pro-preview" },
+        { "providers": ["google"], "model": "gemini-2.5-pro" },
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" }
+      ]
+    },
+    
+    "writing": {
+      "model": "github-copilot/gemini-3-flash-preview",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "gemini-3-flash-preview" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" }
+      ]
+    },
+    
+    "unspecified-low": {
+      "model": "github-copilot/claude-sonnet-4",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" },
+        { "providers": ["opencode"], "model": "kimi-k2.5-free" }
+      ]
+    },
+    
+    "unspecified-high": {
+      "model": "github-copilot/claude-sonnet-4.5",
+      "fallbackChain": [
+        { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
+        { "providers": ["github-copilot"], "model": "gpt-5.2" },
+        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+      ]
+    }
+  },
+  
+  "disabled_mcps": [
+    "grep_app",
+    "context7"
+  ]
+}

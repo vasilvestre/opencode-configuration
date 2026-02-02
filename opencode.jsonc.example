@@ -1,0 +1,108 @@
+{
+  "plugin": [
+    "@tarquinen/opencode-dcp@latest",
+    //"opencode-gemini-auth@latest",
+    //"opencode-antigravity-auth@1.3.0",
+    "oh-my-opencode@latest"
+  ],
+  "mcp": {
+    "serena": {
+      "command": [
+        "/home/vasilvestre/.local/bin/uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--project-from-cwd",
+        "--context",
+        "agent",
+        "--enable-web-dashboard",
+        "false"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "deepwiki": {
+      "command": [
+        "npx",
+        "-y",
+        "mcp-deepwiki@latest"
+      ],
+      "enabled": false,
+      "type": "local"
+    },
+    "context7": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+	"put_yours"
+      ],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": true
+    },
+    "MCP_DOCKER": {
+      "type": "local",
+      "command": ["docker", "mcp", "gateway", "run"],
+      "enabled": true
+    },
+    "zread": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/zread/mcp",
+      "headers": {
+        "Authorization": "Bearer put_yours"
+      },
+      "enabled": false
+    },
+    "grepai": {
+      "command": [
+        "grepai",
+        "mcp-serve"
+      ],
+      "enabled": true,
+      "type": "local"
+    }
+   },
+  "provider": {
+    "zai-coding-plan": {
+      "models": {
+        "glm-4.7": {
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "tool_call": true,
+          "variants": {
+/*            "low": {
+              "reasoningEffort": "low",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto"
+            },
+            "high": {
+              "reasoningEffort": "high",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto"
+            },
+            "max": {
+              "reasoningEffort": "max",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto"
+            }*/
+            "low": { "thinkingConfig": { "thinkingBudget": 8192 } },
+            "high": { "thinkingConfig": { "thinkingBudget": 16384 } },
+            "max": { "thinkingConfig": { "thinkingBudget": 32768 } }
+          }
+        }
+      }
+    },
+  },
+  "instructions": ["instructions/tools.md"],
+  "$schema": "https://opencode.ai/config.json"
+}
