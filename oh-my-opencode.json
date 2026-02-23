@@ -7,7 +7,7 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ],
       "prompt_append": "For code search, use grepai MCP tool which provides semantic search."
     },
@@ -17,7 +17,7 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ],
       "prompt_append": "For code search, use grepai MCP tool which provides semantic search."
     },
@@ -27,14 +27,14 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "gpt-5.2" },
         { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ]
     },
     
     "librarian": {
-      "model": "zai-coding-plan/glm-4.7",
+      "model": "zai-coding-plan/glm-5",
       "fallbackChain": [
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5" },
         { "providers": ["github-copilot"], "model": "claude-sonnet-4" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" }
       ],
@@ -42,9 +42,9 @@
     },
     
     "explore": {
-      "model": "zai-coding-plan/glm-4.7-flash",
+      "model": "zai-coding-plan/glm-5-flash",
       "fallbackChain": [
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5-flash" },
         { "providers": ["github-copilot"], "model": "gpt-5-mini" },
         { "providers": ["opencode"], "model": "gpt-5-nano" }
       ],
@@ -64,7 +64,7 @@
       "model": "opencode/kimi-k2.5-free",
       "fallbackChain": [
         { "providers": ["opencode"], "model": "kimi-k2.5-free" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5" },
         { "providers": ["github-copilot"], "model": "claude-sonnet-4" }
       ],
       "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
@@ -75,7 +75,7 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ],
       "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
     },
@@ -85,7 +85,7 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "gpt-5.2" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ],
       "prompt_append": "When searching code, prefer using grepai MCP tool over built-in Grep tool for semantic search capabilities."
     },
@@ -94,7 +94,7 @@
       "model": "opencode/kimi-k2.5-free",
       "fallbackChain": [
         { "providers": ["opencode"], "model": "kimi-k2.5-free" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5-flash" },
         { "providers": ["github-copilot"], "model": "gpt-5-mini" }
       ],
       "prompt_append": "For code search, use grepai MCP tool which provides semantic search."
@@ -103,9 +103,9 @@
   
   "categories": {
     "quick": {
-      "model": "zai-coding-plan/glm-4.7-flash",
+      "model": "zai-coding-plan/glm-5-flash",
       "fallbackChain": [
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5-flash" },
         { "providers": ["github-copilot"], "model": "gpt-5-mini" },
         { "providers": ["opencode"], "model": "gpt-5-nano" }
       ]
@@ -125,7 +125,7 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
         { "providers": ["github-copilot"], "model": "gpt-5.2" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ]
     },
     
@@ -142,7 +142,7 @@
       "model": "github-copilot/gemini-3-flash-preview",
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "gemini-3-flash-preview" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7-flash" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5-flash" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" }
       ]
     },
@@ -151,7 +151,7 @@
       "model": "github-copilot/claude-sonnet-4",
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "claude-sonnet-4" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" },
+        { "providers": ["zai-coding-plan"], "model": "glm-5" },
         { "providers": ["opencode"], "model": "kimi-k2.5-free" }
       ]
     },
@@ -161,7 +161,7 @@
       "fallbackChain": [
         { "providers": ["github-copilot"], "model": "claude-sonnet-4.5" },
         { "providers": ["github-copilot"], "model": "gpt-5.2" },
-        { "providers": ["zai-coding-plan"], "model": "glm-4.7" }
+        { "providers": ["zai-coding-plan"], "model": "glm-5" }
       ]
     }
   },
